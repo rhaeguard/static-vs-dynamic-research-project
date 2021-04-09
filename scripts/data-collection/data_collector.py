@@ -81,12 +81,17 @@ def create_pandas_db():
     projects = populate_all()
     projects = list(map(project_to_tuple, projects))
     df = pd.DataFrame.from_records(projects, columns =["Project Name", "Project Language", "Technical Debt Ratio", "Number of Lines of Code"])
-    df.to_csv('data_dump')
+    df.to_csv('data_dump.csv')
+    return df
 
 def read_db_from_dump():
-    return pd.read_csv("data_dump")[["Project Name", "Project Language", "Technical Debt Ratio", "Number of Lines of Code"]]
+    return pd.read_csv("data_dump.csv")[["Project Name", "Project Language", "Technical Debt Ratio", "Number of Lines of Code"]]
 
 if __name__ == "__main__":
-    df = read_db_from_dump()
+    read_from_dump = True
+    if read_from_dump:
+        df = read_db_from_dump()
+    else:
+        df = create_pandas_db()
     df = df.sort_values(by="Project Language")
     print(df)

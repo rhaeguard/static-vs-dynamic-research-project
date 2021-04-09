@@ -1,0 +1,11 @@
+#,Project Name,Github URL,Github Stars,Project Type,Language %
+1,kubernetes,https://github.com/kubernetes/kubernetes,75420,Production-Grade Container Scheduling and Management,96.7
+2,moby,https://github.com/moby/moby,59854,Moby Project - a collaborative project for the container ecosystem to assemble container-based systems,96.8
+3,hugo,https://github.com/gohugoio/hugo,50738,The world’s fastest framework for building websites.,99.1
+4,gin,https://github.com/gin-gonic/gin,46554,"Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.",99.6
+5,frp,https://github.com/fatedier/frp,43950,A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.,98.2
+6,v2ray-core,https://github.com/v2ray/v2ray-core,36765,A platform for building proxies to bypass network restrictions.,97.5
+7,gogs,https://github.com/gogs/gogs,36624,Gogs is a painless self-hosted Git service,90.6
+8,prometheus,https://github.com/prometheus/prometheus,35860,The Prometheus monitoring system and time series database.	,89.2
+9,etcd,https://github.com/etcd-io/etcd,35225,Distributed reliable key-value store for the most critical data of a distributed system,96.3
+10,traefik,https://github.com/traefik/traefik,33101,The Cloud Native Application Proxy,91.1

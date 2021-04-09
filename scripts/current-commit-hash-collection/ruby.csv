@@ -1,0 +1,11 @@
+#,Project Name,Github URL,Github Stars,Project Type,Language %
+1,rails,https://github.com/rails/rails,47813,Rails is a web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern.,95.4
+2,huginn,https://github.com/huginn/huginn,31084,"Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. Huginn's Agents create and consume events, propagating them along a directed graph. Think of it as a hackable version of IFTTT or Zapier on your own server. You always know who has your data. You do.",88.8
+3,brew,https://github.com/Homebrew/brew,27240,🍺 The missing package manager for macOS (or Linux),93.5
+4,metasploit-framework,https://github.com/rapid7/metasploit-framework,23458,Metasploit Framework,94.6
+5,vagrant,https://github.com/hashicorp/vagrant,21660,Vagrant is a tool for building and distributing development environments.,95.9
+6,devise,https://github.com/heartcombo/devise,21512,Flexible authentication solution for Rails with Warden.,97.2
+7,sinatra,https://github.com/sinatra/sinatra,11271,Classy web-development dressed in a DSL (official / canonical repo),99.4
+8,CocoaPods,https://github.com/CocoaPods/CocoaPods,13089,The Cocoa Dependency Manager.,100
+9,capistrano,https://github.com/capistrano/capistrano,11782,Remote multi-server automation tool,95.6
+10,rubocop,https://github.com/rubocop/rubocop,11344,"A Ruby static code analyzer and formatter, based on the community Ruby style guide.",99.9
