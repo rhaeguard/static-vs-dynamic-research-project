@@ -1,0 +1,1 @@
+git rev-list --pretty='format:%ad' --date=short HEAD
