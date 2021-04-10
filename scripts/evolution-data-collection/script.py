@@ -38,19 +38,35 @@ def collect_data(project_key: str):
     return EvolutionMetricResults(ncloc, sqale_debt_ratio, sqale_index)
 
 
-read_from_csv = True
+colummns = ["Language", "Project", "Number of Lines of Code", "Technical Debt Ratio", "Technical Debt", "Date"]
 
-colummns = ["Number of Lines of Code", "Technical Debt Ratio", "Technical Debt"]
+project_keys = [
+    "evolution-kotlin-ktor",
+    "evolution-js-express"
+]
+dfs = []
+for key in project_keys:
+    r = collect_data(key)
+    lng = key.split("-")[1]
+    proj = key.split("-")[2]
 
-if read_from_csv:
-    df = pd.read_csv("evolution-kotlin-ktor.csv")[colummns]
-else:
-    r = collect_data("evolution-kotlin-ktor")
-    records = zip(r.ncloc, r.sqale_debt_ratio, r.sqale_index)
+    lang = len(r.ncloc) * [lng]
+    project = len(r.ncloc) * [proj]
 
+    commits = []
+    with open(f"../evolution-commit-selector/{lng}/{proj}/commits-and-dates") as f:
+        for ll in f:
+            commits.append(ll.split()[1])
+
+    records = zip(lang, project, r.ncloc, r.sqale_debt_ratio, r.sqale_index, commits)
+    
     df = pd.DataFrame.from_records(records, columns=colummns)
-    df.to_csv("evolution-kotlin-ktor.csv")
+    dfs.append(df)
+
+df = pd.concat(dfs)
 
 df["Size Normalized Technical Debt"] = df["Technical Debt"] / df["Number of Lines of Code"]
+
+df.to_csv("data.csv")
 
 print(df)

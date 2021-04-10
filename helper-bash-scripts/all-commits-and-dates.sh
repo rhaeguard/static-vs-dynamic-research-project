@@ -1,1 +1,1 @@
-git rev-list --pretty='format:%ad' --date=short HEAD
+git rev-list --pretty='format:%ad' --date=short HEAD > all_commits
