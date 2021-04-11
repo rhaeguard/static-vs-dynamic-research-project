@@ -14,8 +14,12 @@ class Project:
         return f"./{self.lang}/{self.name}"
 
 projects = [
-    Project("kotlin", "ktor", "evolution-kotlin-ktor"),
-    Project("js", "express", "evolution-js-express")
+    # Project("kotlin", "ktor", "evolution-kotlin-ktor"),
+    # Project("js", "express", "evolution-js-express"),
+    # Project("scala", "dotty", "evolution-scala-dotty"),
+    # Project("go", "etcd", "evolution-go-etcd"),
+    # Project("python", "django", "evolution-python-django"),
+    Project("ruby", "rails", "evolution-ruby-rails")
 ]
 
 def months_differ(month_a, month_b):

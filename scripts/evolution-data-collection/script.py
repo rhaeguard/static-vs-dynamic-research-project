@@ -42,7 +42,11 @@ colummns = ["Language", "Project", "Number of Lines of Code", "Technical Debt Ra
 
 project_keys = [
     "evolution-kotlin-ktor",
-    "evolution-js-express"
+    "evolution-js-express",
+    "evolution-scala-dotty",
+    "evolution-go-etcd",
+    "evolution-ruby-rails",
+    "evolution-python-django",
 ]
 dfs = []
 for key in project_keys:
