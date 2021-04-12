@@ -1,0 +1,3 @@
+Project Name,Project Language,Monotonic Trend is Present,TD Trend Type,p-value,Z-value
+express,js,True,Upward,4.319211655001709e-12,6.926320389593064
+ktor,kotlin,True,Upward,4.4954240330241646e-10,6.2357765427338
