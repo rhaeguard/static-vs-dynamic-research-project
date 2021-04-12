@@ -5,7 +5,6 @@ from dataclasses import dataclass
 class Project:
     lang: str
     name: str
-    sonarqube_key: str
 
     def get_commits_file_location(self) -> str:
         return f"{self.get_folder_location()}/all_commits"
@@ -14,8 +13,18 @@ class Project:
         return f"./{self.lang}/{self.name}"
 
 projects = [
-    Project("kotlin", "ktor", "evolution-kotlin-ktor"),
-    Project("js", "express", "evolution-js-express")
+    Project("kotlin", "ktor"),
+    Project("kotlin", "kotlinx.coroutines"),
+    Project("scala", "finagle"),
+    Project("scala", "dotty"),
+    Project("go", "etcd"),
+    Project("go", "moby"),
+    Project("js", "express"),
+    Project("js", "vue"),
+    Project("ruby", "rails"),
+    Project("ruby", "vagrant"),
+    Project("python", "scikit-learn"),
+    Project("python", "django")
 ]
 
 def months_differ(month_a, month_b):
