@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm as nrm, mstats
 
-def perform_mk_test(x: list, alpha: float = 0.01) -> None:  
+def perform_mk_test(x: list, alpha: float = 0.01):  
     """
     Mann-Kendall Test For Monotonic Trend
     https://vsp.pnnl.gov/help/vsample/design_trend_mann_kendall.htm
@@ -61,12 +61,14 @@ def perform_mk_test(x: list, alpha: float = 0.01) -> None:
 
     return h, trend, p, z
 
-def analyze_td_evolution(column_name: str) -> None:
+def analyze_td_evolution(column_name: str):
     df = pd.read_csv(os.path.join(os.path.dirname(__file__), "..\evolution-data-collection\data.csv"))[
         ["Project", "Language", column_name]
     ]
 
     df = df.groupby(["Project", "Language"]).agg(lambda x: list(x)).reset_index()
+
+    df_grouped = df.groupby("Language")
 
     header = [
         "Project Name", 
@@ -85,9 +87,11 @@ def analyze_td_evolution(column_name: str) -> None:
         writer = csv.writer(file)
         writer.writerow(header)
 
-        for index, row in df.iterrows():
-            h, trend, p, z = perform_mk_test(row[column_name])
-            writer.writerow([row["Project"], row["Language"], h, trend, p, z])
+        for group_name, df_group in df_grouped:
+            for row_index, row in df_group.iterrows():
+                h, trend, p, z = perform_mk_test(row[column_name])
+                writer.writerow([row["Project"], row["Language"], h, trend, p, z])
 
-analyze_td_evolution("Technical Debt")
-analyze_td_evolution("Size Normalized Technical Debt")
+if __name__ == "__main__":
+    analyze_td_evolution("Technical Debt")
+    analyze_td_evolution("Size Normalized Technical Debt")
