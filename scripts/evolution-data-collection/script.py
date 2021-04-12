@@ -17,6 +17,7 @@ class EvolutionMetricResults:
 
 
 def collect_data(project_key: str):
+    print(project_key)
     url = BASE_URL + \
         f"/measures/search_history?component={project_key}&metrics=sqale_index,sqale_debt_ratio,ncloc&ps=1000"
     response = requests.get(url, auth=HTTPBasicAuth(*credentials))
@@ -47,12 +48,18 @@ project_keys = [
     "evolution-go-etcd",
     "evolution-ruby-rails",
     "evolution-python-django",
+    "evolution-kotlin-kotlinx.coroutines",
+    "evolution-go-moby",
+    "evolution-scala-finagle",
+    "evolution-js-vue",
+    "evolution-ruby-vagrant",
+    "evolution-python-scikit-learn",
 ]
 dfs = []
 for key in project_keys:
     r = collect_data(key)
     lng = key.split("-")[1]
-    proj = key.split("-")[2]
+    proj = "-".join(key.split("-")[2:])
 
     lang = len(r.ncloc) * [lng]
     project = len(r.ncloc) * [proj]
