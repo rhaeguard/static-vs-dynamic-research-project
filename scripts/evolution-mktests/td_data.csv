@@ -1,0 +1,13 @@
+Project Name,Project Language,Monotonic Trend is Present,TD Trend Type,p-value,Z-value
+etcd,go,True,Upward,6.661159712706421e-08,5.400078891429327
+moby,go,True,Upward,0.0026666817936140674,3.003757045930553
+express,js,True,Upward,4.319211655001709e-12,6.926320389593064
+vue,js,True,Upward,1.2488669653976103e-08,5.6929175599886905
+kotlinx.coroutines,kotlin,True,Upward,4.642925902409445e-06,4.58030758835168
+ktor,kotlin,True,Upward,4.4954240330241646e-10,6.2357765427338
+django,python,True,Upward,0.0,10.851454349211366
+scikit-learn,python,True,Upward,1.0658141036401503e-14,7.7311104979968865
+rails,ruby,True,Upward,0.0,10.780434753172457
+vagrant,ruby,True,Upward,0.0,9.638578542737417
+dotty,scala,True,Upward,8.69430047645281e-06,4.447332996979539
+finagle,scala,True,Upward,1.1885825657032001e-11,6.781592491019289
