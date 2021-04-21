@@ -7,7 +7,9 @@ import pandas as pd
 
 credentials = os.getenv("SONAR_USER_PASS").split(":")
 
-BASE_URL = "http://138.197.132.210:9000/api"
+sonar_endpoint = os.getenv("SONAR_ENDPOINT")
+
+BASE_URL = sonar_endpoint + "/api"
 
 @dataclass
 class EvolutionMetricResults:
