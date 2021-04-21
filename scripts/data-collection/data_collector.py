@@ -7,7 +7,9 @@ import pandas as pd
 
 credentials = os.getenv("SONAR_USER_PASS").split(":")
 
-BASE_URL = "http://138.197.132.210:9000/api"
+sonar_endpoint = os.getenv("SONAR_ENDPOINT")
+
+BASE_URL = sonar_endpoint + "/api"
 
 
 @dataclass
@@ -69,15 +71,9 @@ def set_metrics_of_project(project: Project):
 
 
 def populate_all():
-    total, projects = get_all_projects()
+    _, projects = get_all_projects()
     for project in projects:
         set_metrics_of_project(project)
-
-    # print("Total : %d projects" % total)
-    # print("="*70)
-    # print("%-40s %-10s %-8s %-8s" % ("Name", "Language", "TD Score", "NCLOC"))
-    # for p in projects:
-        # print("%-40s %-10s %6.2f %8d %8d" % project_to_tuple(p))
     return projects
 
 columns=["Project Name", "Project Language", "Technical Debt Ratio", "Number of Lines of Code", "Technical Debt"]
@@ -93,7 +89,7 @@ def read_db_from_dump():
     return pd.read_csv("data_dump.csv")[columns]
 
 if __name__ == "__main__":
-    read_from_dump = True
+    read_from_dump = False
     if read_from_dump:
         df = read_db_from_dump()
     else:

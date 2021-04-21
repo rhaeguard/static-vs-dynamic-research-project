@@ -4,6 +4,11 @@ Members:
 - Kseniia Priakhina
 - Mansur Gulami
 
+## Replication Guides
+
+1. [Research Question 1 replication guide](./RQ1_Replication_Guide.md)
+2. [Research Question 2 replication guide](./RQ2_Replication_Guide.md)
+
 # Project list
 
 [Link to Google Sheet](https://docs.google.com/spreadsheets/d/17mORQmFUJLL8uVBzlzpKbcx1utY9GrNeyHZ-ROhkyrU/edit?usp=sharing)
