@@ -51,3 +51,11 @@ To visualize the changes, just run [visualize.ipynb](./scripts/evolution-data-co
 
 We made use of [Mann-Kendall Tests code](https://github.com/digeo/evolution-of-td-in-apache/blob/master/perform_mktests.py) from _The Evolution of Technical Debt in the Apache Ecosystem_ paper repository.
 
+To perform the MK tests, run [evolution-mktest-technical-debt.py](./scripts/evolution-mktests/evolution-mktest-technical-debt.py) file.
+
+The script stores the data associated with the analysis of Technical Debt in [td_data.csv](./scripts/evolution-mktests/td_data.csv) and Size-Normalized Technical Debt (Technical Debt Density) in [normalized_td_data.csv](./scripts/evolution-mktests/normalized_td_data.csv).
+
+
+## Plotting
+
+[visualize.ipynb](./scripts/evolution-mktests/visualize.ipynb) file visualizes the collected data.
