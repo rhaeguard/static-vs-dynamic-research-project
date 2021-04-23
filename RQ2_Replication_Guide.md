@@ -49,5 +49,5 @@ To visualize the changes, just run [visualize.ipynb](./scripts/evolution-data-co
 
 ## Running tests
 
-TODO:
+We made use of [Mann-Kendall Tests code](https://github.com/digeo/evolution-of-td-in-apache/blob/master/perform_mktests.py) from _The Evolution of Technical Debt in the Apache Ecosystem_ paper repository.
 
