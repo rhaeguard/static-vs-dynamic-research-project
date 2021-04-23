@@ -4,6 +4,10 @@ Members:
 - Kseniia Priakhina
 - Mansur Gulami
 
+## Sonarqube setup
+
+[Follow this guide to set up Sonarqube](./sonarqube)
+
 ## Replication Guides
 
 1. [Research Question 1 replication guide](./RQ1_Replication_Guide.md)
